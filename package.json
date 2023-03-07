@@ -1,0 +1,23 @@
+{
+  "name": "mp3",
+  "version": "1.0.0",
+  "description": "Shop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijoh01/FE22-js2-mp3-Viktor-Johansson.git"
+  },
+  "author": "Viktor & Nona",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vijoh01/FE22-js2-mp3-Viktor-Johansson/issues"
+  },
+  "homepage": "https://github.com/vijoh01/FE22-js2-mp3-Viktor-Johansson#readme",
+  "dependencies": {
+    "feather-icons": "^4.29.0",
+    "jquery": "^3.6.3"
+  }
+}
