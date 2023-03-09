@@ -13,6 +13,30 @@ body {
     align-items: center;
 }
 
+#cartContainer {
+    display: flex;
+       
+    flex-direction: column;
+    align-items: center;
+}
+
+.cartBtn, .logo, .buyBtn {
+    cursor: pointer;
+}
+
+.cartCard .closeBtn {
+    position: absolute;
+    margin-bottom: 17rem;
+    margin-left: 35rem;
+    padding: 0.4rem;
+    background-color: rgba(0, 0, 0, 0.095);
+    cursor: pointer;
+}
+
+.cartCard .closeBtn:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.512);
+}
 
 #container {
     width: 100%;
@@ -21,16 +45,51 @@ body {
     flex-wrap: wrap;
 }
 
+.totalCost {
+    color: white;
+}
+
+.buyBtn {
+    padding: 0.5rem;
+}
+
 h1 {
     font-family: 'Tilt Warp', Courier, monospace;
     font-weight: lighter;
     font-size: 1.2rem;
 }
 
+#total {
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.62);
+    bottom: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 body * {
     font-family: 'Tilt Warp', Courier, monospace;
     font-weight: lighter;
     font-size: 1.05rem;
+}
+
+.cartCard {
+    overflow: hidden;
+    box-sizing: border-box;
+  
+    height: 30rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    margin: 1rem;
+    min-width: 17rem;
+    flex-basis: 20rem;
+    border-radius: 1rem;
 }
 
 .card {
@@ -57,11 +116,16 @@ body * {
     align-items: center;
 }
 
+.card form button[disabled] {
+    background-color: rgba(243, 0, 0, 0.702);
+    color: white;
+}
+
 .card img {
     width: 10rem;
 }
 
-.card form div, .card input {
+.card form button, .card input {
     width: 4rem;
     text-align: center;
 
@@ -74,11 +138,11 @@ body * {
     outline: 0;
     border-radius: 0.3rem;
 }
-.card form input:hover, .card form input:focus, .card form div:hover  {
+.card form input:hover, .card form input:focus, .card form button:hover  {
     outline: 1px solid rgba(0, 0, 0, 0.139);
 }
 
-.card form div:hover {
+.card form button:hover:not(.card form button[disabled]) {
     cursor: pointer;
     transition: background-color 0.7s ease-out;
     background-color: #3695ee8d;
@@ -98,12 +162,23 @@ body * {
 
 header {
     height: 5rem;
-    margin-bottom: 5rem;
+
     background: rgba(0, 0, 0, 0.542);
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
+}
+
+.logo {
+    width: 5rem;
+    margin-left: 3rem;
+ 
+    background-color: rgba(109, 107, 176, 0.27);
+    padding: 0 0.5rem 0 0.5rem;
+    border-radius: 0.4rem;
+    filter: brightness(1.5);
+
 }
 
 header div {
